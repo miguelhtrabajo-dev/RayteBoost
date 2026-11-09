@@ -1,402 +1,968 @@
 <!DOCTYPE html>
-<html lang="en" class="webkit chrome win js bl-motion-ready">
+<html lang="es" class="dark scroll-smooth">
 <head>
-    <title>RayteBoost - Turn content access into growth and revenue</title>
-    <meta name="description" content="Turn content access into growth and revenue automatically">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://boostylink.com/assets/template_dark/images/favicon-96x96.png" sizes="96x96">
-    <link rel="stylesheet" href="https://boostylink.com/assets/template_dark/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://boostylink.com/assets/template_dark/css/style.css?1">
-    <link rel="stylesheet" href="https://boostylink.com/assets/template_dark/fonts/fonts.css">
-    <link rel="stylesheet" href="https://boostylink.com/assets/template_dark/css/responsive.css">
-    <link rel="stylesheet" href="https://boostylink.com/assets/template_dark/css/carouselTicker.css">
-    <link rel="stylesheet" href="https://boostylink.com/assets/template/fonts/fontawesome.css">
-    <link rel="stylesheet" href="https://boostylink.com/assets/template_dark/css/home-motion.css?v=20260911">
-    <style>
-        body { background-color: #0c100e; color: #fff; font-family: 'Inter', sans-serif; }
-        .avtar.avtar-s { width: 40px; height: 40px; font-size: 14px; border-radius: 12px; }
-        .avtar { display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 18px; font-weight: 600; width: 48px; height: 48px; }
-        #actionList { counter-reset: action_item_i; }
-        .action_item { display: flex; flex-direction: column; gap: 10px; margin: 10px 0; }
-        .action_item .buttons { display: flex; align-items: center; gap: 10px; }
-        .action_item .buttons::before { counter-increment: action_item_i; content: counter(action_item_i) "."; width: 16px; color: #87C76D; font-weight: bold; }
-        .btn_select_action { flex: 1; }
-        #previewContent { margin-top: -50px; height: 100%; box-shadow: 0px -11px 20px 12px rgb(0 0 0); border-radius: 16px; overflow: hidden; background: #121815; }
-        .stealth-admin-panel { display: none; background: #16201a; border: 2px solid #25A68B; border-radius: 16px; padding: 25px; margin: 40px auto; max-width: 900px; box-shadow: 0 10px 30px rgba(0,0,0,0.8); }
-        .ad-slot-box { background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; padding: 10px; text-align: center; margin: 15px 0; font-size: 11px; color: #888; }
-    </style>
-</head>
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RayteBoost - Convierte el acceso a tu contenido en seguidores e ingresos</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons (Same icon library used in BoostyLink) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <!-- Header Original BoostyLink -->
-    <header class="header sticky_header">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="/" onclick="triggerAdminModal(event)">
-                    <figure style="margin:0;">
-                        <img src="https://boostylink.com/assets/template_dark/images/logo.svg" alt="logo" class="img-fluid" id="brandLogo">
-                    </figure>
-                </a>
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span><span></span><span></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#boostylink_details">Create</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#features_section">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="javascript:void(0)" onclick="openCreatorDashboard()">Creator Dashboard</a></li>
-                    </ul>
-                    <div class="header-btns">
-                        <a href="javascript:void(0)" class="sign-in" onclick="alert('Inicia sesión en tu cuenta de creador')">Sign in</a>
-                        <a href="javascript:void(0)" class="btn btn-green-light" onclick="alert('Únete gratis y comienza a monetizar tus enlaces hoy.')">Join for free</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Content Start -->
-    <div class="content">
-
-        <!-- Banner Start -->
-        <section class="banner-wrp">
-            <div class="left-shape"><figure><img src="https://boostylink.com/assets/template_dark/images/left-shape.png" alt="shape" class="img-fluid"></figure></div>
-            <div class="banner-inner">
-                <div class="container">
-                    <div class="banner-main">
-                        <div class="banner-top-line">
-                            <span></span>
-                            <div class="common-detail"><p>Grow your followers and income today!</p></div>
-                        </div>
-                        <div class="main-title"><h1>Turn content access into growth and revenue</h1></div>
-                        <div class="banner-text"><p>Create action-based links that grow your reach and generate revenue automatically — no extra steps, no barriers for visitors</p></div>
-                        <div class="banner-btns">
-                            <a href="javascript:void(0)" class="btn btn-white" onclick="document.getElementById('boostylink_details').scrollIntoView({behavior: 'smooth'})">Sign up for free now</a>
-                            <a href="javascript:void(0)" class="btn create-link-btn" onclick="document.getElementById('boostylink_details').scrollIntoView({behavior: 'smooth'})">Sign Up to Create Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="right-shape"><figure><img src="https://boostylink.com/assets/template_dark/images/right-shape.png" alt="shape" class="img-fluid"></figure></div>
-        </section>
-
-        <!-- Slot #1: Header Banner Adsterra -->
-        <div class="container"><div class="ad-slot-box">Adsterra Banner Slot #1 (728x90 / Responsive)</div></div>
-
-        <!-- How It Works Section -->
-        <section class="followers-wrp bl-how-section" id="how-it-works">
-            <div class="container">
-                <div class="followers-main bl-how-panel">
-                    <div class="section-title"><h2>How RayteBoost works</h2></div>
-                    <div class="bl-motion bl-how is-running bl-at-1 bl-at-2" role="group" aria-label="How it works">
-                        <div class="bl-how-grid">
-                            <div class="bl-how-step">
-                                <div class="bl-how-visual bl-how-source">
-                                    <div class="bl-mini-document"><svg class="bl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path></svg><span>YOUR DROP</span></div>
-                                    <div class="bl-how-url bl-glass"><span>rayteboost.github.io/link</span></div>
-                                </div>
-                                <div class="bl-how-copy"><span class="bl-how-number">01</span><h3>Start with your content</h3><p>Add a link or file release.</p></div>
-                            </div>
-                            <div class="bl-how-step">
-                                <div class="bl-how-visual bl-how-actions">
-                                    <div class="bl-how-action bl-glass"><span>Subscribe to unlock</span></div>
-                                    <div class="bl-how-or"><span></span>or<span></span></div>
-                                    <div class="bl-how-action bl-glass"><span>Monetized Action</span></div>
-                                </div>
-                                <div class="bl-how-copy"><span class="bl-how-number">02</span><h3>Choose the next step</h3><p>Grow with social tasks or ads.</p></div>
-                            </div>
-                            <div class="bl-how-step">
-                                <div class="bl-how-visual bl-how-result">
-                                    <span class="bl-how-gain bl-how-gain--one bl-glass">+1 follower</span>
-                                    <span class="bl-how-gain bl-how-gain--two bl-glass">$0.15 income</span>
-                                </div>
-                                <div class="bl-how-copy"><span class="bl-how-number">03</span><h3>Share & Earn</h3><p>Fans unlock content, you get revenue.</p></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slot #2: Banner Intermedio -->
-        <div class="container"><div class="ad-slot-box">Adsterra Banner Slot #2 (300x250)</div></div>
-
-        <!-- Builder & Preview Section (Boostylink Details) -->
-        <section id="boostylink_details" class="boostylink-details-wrp">
-            <div class="boostylink-vector"><figure><img src="https://boostylink.com/assets/template_dark/images/boostylink-vector.svg" alt="vector" class="img-fluid"></figure></div>
-            <div class="boostylink-details-main">
-                <div class="container">
-                    <div class="boostylink-details-inner">
-                        <div class="boostylink-details-section common-block">
-                            <ul class="nav nav-tabs common-block" id="myTab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <a href="javascript:void(0)" class="nav-link active" id="url-tab">
-                                        <div class="boostylink-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M7.5013 10.1668H5.83464C3.53345 10.1668 1.66797 8.30135 1.66797 6.00016C1.66797 3.69898 3.53345 1.8335 5.83464 1.8335H7.5013M12.5013 10.1668H14.168C16.4692 10.1668 18.3346 8.30135 18.3346 6.00016C18.3346 3.69898 16.4692 1.8335 14.168 1.8335H12.5013M5.83464 6.00016L14.168 6.00016" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
-                                        <span>URL Locker Creator</span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="url-tab-pane" role="tabpanel">
-                                    <form id="formCreateLink" class="common-form" onsubmit="generateSecureLocker(event)">
-                                        <div class="boostylink-details-inner">
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <div class="boostylink-details-left">
-                                                        <div class="form-group">
-                                                            <div class="form-input">
-                                                                <input type="url" id="destination_url" name="destination_url" class="form-control" placeholder="URL de destino final (Ej: Mega, Mediafire, etc.)*" required>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <div class="form-input">
-                                                                <input type="text" id="title" name="title" class="form-control" placeholder="Título atractivo (Ej: Descarga Script V13)*" required oninput="updateLivePreview()">
-                                                            </div>
-                                                        </div>
-                                                        <div class="boostylink-actions">
-                                                            <div class="common-detail"><h5>Required Actions (Anti-Cheat Active)</h5></div>
-                                                            <div id="actionList">
-                                                                <div class="action_item actions-block">
-                                                                    <div class="buttons">
-                                                                        <span class="btn_select_action" style="color:#fff; font-weight:500;">Suscribirse a Canal de YouTube</span>
-                                                                    </div>
-                                                                    <div class="inputs">
-                                                                        <input type="url" class="form-control yt-url-input" placeholder="https://youtube.com/@tucanal" required value="https://youtube.com">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="action_item actions-block">
-                                                                    <div class="buttons">
-                                                                        <span class="btn_select_action" style="color:#fff; font-weight:500;">Visitar enlace patrocinado</span>
-                                                                    </div>
-                                                                    <div class="inputs">
-                                                                        <input type="url" class="form-control visit-url-input" placeholder="https://tusitio.com" required value="https://google.com">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="boostylink-details-right h-100">
-                                                        <div class="preview-block">
-                                                            <div class="common-detail"><p>Live Visitor View Preview</p></div>
-                                                            <div class="preview-right">
-                                                                <button type="submit" class="btn btn-common w-100" style="background: #25A68B; color: #fff; font-weight:600;">Generar Enlace Protegido</button>
-                                                            </div>
-                                                        </div>
-                                                        <div id="previewContent" style="padding: 20px; min-height: 420px;">
-                                                            <div id="lockerSimulator" style="text-align:center; padding-top:40px;">
-                                                                <h4 id="simTitle" style="color:#fff;">Tu próximo gran archivo.</h4>
-                                                                <p style="color:#aaa; font-size:13px;">Completa las acciones para desbloquear.</p>
-                                                                <div style="margin:20px 0; background:rgba(255,255,255,0.05); padding:15px; border-radius:10px;">
-                                                                    <p style="margin:5px 0; font-size:14px;">🔒 1. Suscribirse a YouTube (Verificación de permanencia)</p>
-                                                                    <p style="margin:5px 0; font-size:14px;">🔒 2. Visitar enlace patrocinado</p>
-                                                                    <p style="margin:5px 0; font-size:14px;">🔒 3. Anuncio aleatorio Smartlink</p>
-                                                                </div>
-                                                                <button type="button" class="btn btn-secondary btn-sm" disabled>Contenido Protegido</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slot #3 & #4: Banners de Alta Conversión -->
-        <div class="container"><div class="row"><div class="col-md-6"><div class="ad-slot-box">Adsterra Slot #3 (300x250)</div></div><div class="col-md-6"><div class="ad-slot-box">Adsterra Slot #4 (300x250)</div></div></div></div>
-
-        <!-- Stealth Admin Panel (Oculto para Dueño) -->
-        <div class="container">
-            <div id="stealthAdminPanel" class="stealth-admin-panel">
-                <h3 style="color:#25A68B; margin-bottom:15px;">🔒 Panel Secreto de Dueño (Modo Administrador)</h3>
-                <p style="font-size:13px; color:#bbb;">Aquí puedes auditar el tráfico real de Adsterra, el 70% de tu ganancia neta y el 30% asignado a los creadores.</p>
-                <div class="row" style="margin-top:20px; text-align:center;">
-                    <div class="col-md-3">
-                        <div style="background:rgba(0,0,0,0.4); padding:15px; border-radius:10px;">
-                            <small style="color:#88">Impresiones Totales (x8)</small>
-                            <h4 style="color:#fff; margin-top:5px;" id="adminImpressions">12,450</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div style="background:rgba(0,0,0,0.4); padding:15px; border-radius:10px;">
-                            <small style="color:#88">100% Bruto Adsterra</small>
-                            <h4 style="color:#25A68B; margin-top:5px;" id="adminGross">$62.25 USD</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div style="background:rgba(0,0,0,0.4); padding:15px; border-radius:10px;">
-                            <small style="color:#88">Tu Ganancia Neta (70%)</small>
-                            <h4 style="color:#87C76D; margin-top:5px;" id="adminPlatform70">$43.58 USD</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div style="background:rgba(0,0,0,0.4); padding:15px; border-radius:10px;">
-                            <small style="color:#88">Pago Creadores (30%)</small>
-                            <h4 style="color:#ffbb33; margin-top:5px;" id="adminCreators30">$18.67 USD</h4>
-                        </div>
-                    </div>
-                </div>
-                <div style="margin-top:20px; text-align:right;">
-                    <button class="btn btn-sm btn-outline-light" onclick="document.getElementById('stealthAdminPanel').style.display='none'">Cerrar Panel</button>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- Content End -->
-
-    <!-- Footer Original -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-main">
-                <div class="footer-bottom text-center">
-                    <p>© 2026 RayteBoost. All rights reserved. <a href="javascript:void(0)" onclick="triggerAdminModal(event)" style="color:#25A68B;">Admin Access</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts de Funcionalidad y Anti-Trampa -->
-    <script src="https://boostylink.com/assets/template_dark/js/jquery-3.7.1.min.js"></script>
-    <script src="https://boostylink.com/assets/template_dark/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Contador de clics en el logo para abrir panel secreto del dueño
-        let logoClicks = 0;
-        function triggerAdminModal(e) {
-            e.preventDefault();
-            logoClicks++;
-            if (logoClicks >= 5) {
-                logoClicks = 0;
-                let pin = prompt("Introduce tu PIN de Administrador (7030):");
-                if (pin === "7030" || pin === "batuco1012") {
-                    document.getElementById('stealthAdminPanel').style.display = 'block';
-                    document.getElementById('stealthAdminPanel').scrollIntoView({behavior: 'smooth'});
-                } else {
-                    alert("PIN incorrecto.");
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        bl: {
+                            bg: '#060a08',
+                            card: '#0c1410',
+                            border: '#1a2e24',
+                            mint: '#25A68B',
+                            lime: '#87C76D',
+                            accent: '#5ce6b5'
+                        }
+                    }
                 }
             }
         }
+    </script>
 
-        function openCreatorDashboard() {
-            alert("Panel de Creador: Aquí tus usuarios ven sus impresiones, clics y ganancias calculadas al 30% (presentado como su fondo de ganancias oficial).");
+    <style>
+        :root {
+            --bl-mint: #25A68B;
+            --bl-lime: #87C76D;
+        }
+        body {
+            background-color: #060a08;
+            color: #f1f5f3;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(37, 166, 139, 0.12) 0%, transparent 38%),
+                radial-gradient(circle at 85% 30%, rgba(135, 199, 109, 0.10) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(37, 166, 139, 0.08) 0%, transparent 45%);
         }
 
-        function updateLivePreview() {
-            let t = document.getElementById('title').value;
-            if(t) document.getElementById('simTitle').innerText = t;
+        /* Glassmorphism BoostyLink Style */
+        .bl-glass {
+            background: rgba(13, 22, 18, 0.78);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(135, 199, 109, 0.16);
+        }
+        .bl-glass-soft {
+            background: rgba(18, 31, 25, 0.65);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .bl-gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #a5f3cf 50%, #87C76D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bl-btn-gradient {
+            background: linear-gradient(135deg, #25A68B 0%, #87C76D 100%);
+            color: #04110b;
+            font-weight: 700;
+            transition: all 0.25s ease;
+        }
+        .bl-btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(135, 199, 109, 0.45);
         }
 
-        // Generador de Link Seguro y Encriptado (Anti-Bypass)
-        function generateSecureLocker(e) {
-            e.preventDefault();
-            let dest = document.getElementById('destination_url').value;
-            let title = document.getElementById('title').value;
-            
-            // Cifrado XOR seguro para evitar scraping directo
-            let secretPayload = btoa(encodeURIComponent(JSON.stringify({d: dest, t: title, ts: Date.now()})));
-            let generatedLink = window.location.href.split('#')[0] + "#unlock=" + secretPayload;
-            
-            document.getElementById('previewContent').innerHTML = `
-                <div style="padding:15px; text-align:center;">
-                    <h5 style="color:#25A68B;">¡Enlace Protegido con Éxito!</h5>
-                    <p style="font-size:12px; color:#aaa;">Comparte este enlace con tu comunidad:</p>
-                    <input type="text" class="form-control form-control-sm text-center" value="${generatedLink}" readonly onclick="this.select(); document.execCommand('copy'); alert('¡Enlace copiado al portapapeles!');">
-                    <small style="color:#87C76D; display:block; margin-top:10px;">✓ Anti-Bypass Activo | 8 Impresiones Adsterra configuradas</small>
+        /* Infinite Social Ticker */
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-ticker {
+            display: flex;
+            width: max-content;
+            animation: ticker 28s linear infinite;
+        }
+        .animate-ticker:hover {
+            animation-play-state: paused;
+        }
+
+        /* Pulse Glow */
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(135, 199, 109, 0.4); }
+            50% { box-shadow: 0 0 22px 4px rgba(37, 166, 139, 0.45); }
+        }
+        .glow-sponsor {
+            animation: pulseGlow 2.2s infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 7px; height: 7px; }
+        ::-webkit-scrollbar-track { background: #060a08; }
+        ::-webkit-scrollbar-thumb { background: #1e352a; border-radius: 99px; }
+        ::-webkit-scrollbar-thumb:hover { background: #25A68B; }
+
+        /* Ad Slot Styling */
+        .ad-slot-container {
+            position: relative;
+            background: rgba(9, 15, 12, 0.9);
+            border: 1px dashed rgba(135, 199, 109, 0.25);
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .ad-badge {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #64748b;
+            background: rgba(0,0,0,0.5);
+            padding: 1px 6px;
+            border-radius: 4px;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-bl-mint selection:text-black">
+
+    <!-- ===================================================== -->
+    <!-- AD SLOT #1: TOP STICKY BANNER (Banner 320x50 Adsterra) -->
+    <!-- ===================================================== -->
+    <div id="topStickyAdBar" class="w-full bg-[#040806]/95 border-b border-bl-border/70 py-1 px-2 sticky top-0 z-50 flex flex-col items-center justify-center">
+        <div class="flex items-center gap-2 text-[10px] text-emerald-400/80 mb-0.5">
+            <span class="px-1.5 py-0.2 bg-emerald-950 border border-emerald-700/40 rounded text-[9px] font-mono">AD SLOT #1 (320x50)</span>
+        </div>
+        <div id="adsterra-slot-1" class="w-full flex justify-center items-center min-h-[50px]">
+            <!-- Inyección de Banner 320x50 Adsterra -->
+            <script>
+                atOptions = {
+                    'key' : '62b512107daaa86e230ee214b03a482d',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://bauval.org/22/62b512107daaa86e230ee214b03a482d"></script>
+        </div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- MAIN NAVIGATION BAR                                   -->
+    <!-- ===================================================== -->
+    <header class="sticky top-[68px] z-40 bl-glass border-b border-bl-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-2">
+            <!-- Brand Logo -->
+            <a href="javascript:void(0)" onclick="switchMainView('home')" class="flex items-center gap-2.5 group">
+                <div class="w-10 h-10 rounded-xl bl-btn-gradient flex items-center justify-center shadow-lg shadow-emerald-500/20">
+                    <i class="ph-bold ph-lock-key-open text-xl text-black"></i>
                 </div>
-            `;
-        }
+                <div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="font-extrabold text-lg tracking-tight text-white">Rayte<span class="text-[#87C76D]">Boost</span></span>
+                        <span class="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">PRO</span>
+                    </div>
+                    <p class="text-[10px] text-gray-400 hidden sm:block">Social Locker & Smart Link Monetizer</p>
+                </div>
+            </a>
 
-        // Lógica de Desbloqueo y Anti-Trampa al abrir un enlace compartido
-        window.addEventListener('DOMContentLoaded', () => {
-            let hash = window.location.hash;
-            if (hash.includes('#unlock=')) {
-                try {
-                    let encoded = hash.split('#unlock=')[1];
-                    let decoded = JSON.parse(decodeURIComponent(atob(encoded)));
-                    
-                    document.querySelector('.content').innerHTML = `
-                        <div class="container" style="max-width:550px; margin:50px auto;">
-                            <div class="bl-glass" style="background:#16201a; border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:30px; text-align:center;">
-                                <h3>🎁 ${decoded.t}</h3>
-                                <p style="color:#aaa; font-size:13px; margin-bottom:25px;">Completa los pasos obligatorios para desbloquear tu contenido.</p>
-                                
-                                <div id="task1Box" style="background:rgba(0,0,0,0.3); padding:15px; border-radius:10px; margin-bottom:15px; display:flex; justify-content:space-between; align-items:center;">
-                                    <span style="font-size:14px;">1. Suscribirse en YouTube (Verificación de salida)</span>
-                                    <button class="btn btn-sm btn-success" id="btnTask1" onclick="startAntiCheatTask(1, 'https://youtube.com')">Suscribirse</button>
-                                </div>
-                                
-                                <div id="task2Box" style="background:rgba(0,0,0,0.3); padding:15px; border-radius:10px; margin-bottom:15px; display:flex; justify-content:space-between; align-items:center;">
-                                    <span style="font-size:14px;">2. Anuncio Patrocinado Smartlink (Aleatorio)</span>
-                                    <button class="btn btn-sm btn-secondary" id="btnTask2" disabled onclick="startSmartlinkRotator()">Ver Anuncio</button>
-                                </div>
+            <!-- Center Navigation -->
+            <nav class="hidden md:flex items-center gap-1 bg-[#080f0c] p-1 rounded-xl border border-white/5">
+                <button onclick="switchMainView('home')" id="navBtn-home" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-white bg-emerald-500/20 border border-emerald-500/30 transition">
+                    <i class="ph-duotone ph-magic-wand mr-1"></i> Crear Enlace
+                </button>
+                <button onclick="switchMainView('how')" id="navBtn-how" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-gray-300 hover:text-white transition">
+                    <i class="ph-duotone ph-steps mr-1"></i> Cómo Funciona
+                </button>
+                <button onclick="switchMainView('dashboard')" id="navBtn-dashboard" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-gray-300 hover:text-white transition">
+                    <i class="ph-duotone ph-chart-line-up mr-1"></i> Panel 30%/70%
+                </button>
+                <button onclick="openAdConfigModal()" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-amber-300 hover:bg-amber-500/10 transition">
+                    <i class="ph-duotone ph-code mr-1"></i> Smartlinks & Rotador
+                </button>
+            </nav>
 
-                                <div id="finalUnlockBox" style="margin-top:25px; display:none;">
-                                    <a href="${decoded.d}" class="btn btn-lg btn-success w-100" style="background:#25A68B; border:none; font-weight:600;" target="_blank">🚀 ¡DESCARGAR / VER CONTENIDO AHORA!</a>
+            <!-- Right User / Auth Controls -->
+            <div class="flex items-center gap-2">
+                <button onclick="testCurrentLockerVisitorView()" class="px-3 py-2 rounded-xl text-xs font-bold bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5 transition" title="Ver cómo lo verá tu visitante">
+                    <i class="ph-bold ph-eye"></i>
+                    <span class="hidden sm:inline">Vista Visitante</span>
+                </button>
+
+                <div id="loggedOutButtons" class="flex items-center gap-2">
+                    <button onclick="openAuthModal('login')" class="px-3 py-2 rounded-xl text-xs font-semibold text-gray-300 hover:text-white transition hidden sm:inline-block">
+                        Iniciar Sesión
+                    </button>
+                    <button onclick="openAuthModal('register')" class="px-3.5 py-2 rounded-xl text-xs bl-btn-gradient flex items-center gap-1.5">
+                        <i class="ph-bold ph-user-plus"></i>
+                        <span>Registrarse Gratis</span>
+                    </button>
+                </div>
+
+                <div id="loggedInProfile" class="hidden items-center gap-2">
+                    <button onclick="switchMainView('dashboard')" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-950/70 border border-emerald-500/30 text-xs">
+                        <span id="userAvatarLetter" class="w-6 h-6 rounded-lg bl-btn-gradient flex items-center justify-center font-bold text-black text-xs">U</span>
+                        <div class="text-left hidden sm:block">
+                            <p id="userNameDisplay" class="font-bold text-white text-[11px] leading-none">Creador</p>
+                            <p id="userBalanceDisplay" class="text-[10px] text-[#87C76D] font-mono">$0.00 USD (30%)</p>
+                        </div>
+                    </button>
+                    <button onclick="logoutUser()" class="p-2 rounded-xl bg-red-500/10 text-red-400 hover:bg-red-500/20 text-xs" title="Cerrar sesión">
+                        <i class="ph-bold ph-sign-out"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Quick Bar -->
+        <div class="flex md:hidden items-center justify-around border-t border-white/5 bg-[#050907] py-1.5 px-2 text-[11px]">
+            <button onclick="switchMainView('home')" class="flex items-center gap-1 text-emerald-400 font-semibold py-1 px-2">
+                <i class="ph-duotone ph-plus-circle"></i> Crear Link
+            </button>
+            <button onclick="testCurrentLockerVisitorView()" class="flex items-center gap-1 text-gray-300 font-semibold py-1 px-2">
+                <i class="ph-duotone ph-device-mobile"></i> Probar Locker
+            </button>
+            <button onclick="switchMainView('dashboard')" class="flex items-center gap-1 text-gray-300 font-semibold py-1 px-2">
+                <i class="ph-duotone ph-wallet"></i> Ganancias
+            </button>
+            <button onclick="openAdConfigModal()" class="flex items-center gap-1 text-amber-300 font-semibold py-1 px-2">
+                <i class="ph-duotone ph-gear"></i> Config
+            </button>
+        </div>
+    </header>
+
+    <!-- ===================================================== -->
+    <!-- VIEW 1: CREATOR LANDING & LIVE BUILDER                -->
+    <!-- ===================================================== -->
+    <main id="creatorPlatformView" class="flex-1">
+
+        <!-- HERO BANNER -->
+        <section class="relative pt-8 pb-10 md:py-14 overflow-hidden">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bl-glass text-xs text-emerald-300 mb-5">
+                    <span class="w-2 h-2 rounded-full bg-[#87C76D] animate-ping"></span>
+                    <span>¡Gana seguidores en YouTube/TikTok + Dinero por cada desbloqueo!</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight bl-gradient-text max-w-4xl mx-auto leading-[1.12]">
+                    Convierte el acceso a tu contenido en crecimiento e ingresos automáticos
+                </h1>
+
+                <p class="mt-4 text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Sube tu foto, pon un título y bloquea tus enlaces detrás de acciones sociales (<strong class="text-white">Suscribirse, Dar Like, Comentar</strong>) + <strong class="text-[#87C76D]">1 anuncio patrocinado aleatorio al final</strong> con 8 impresiones Adsterra por visitante.
+                </p>
+
+                <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
+                    <a href="#boostylink_details" class="px-6 py-3.5 rounded-2xl text-sm bl-btn-gradient flex items-center gap-2 shadow-xl">
+                        <i class="ph-bold ph-lightning text-base"></i>
+                        <span>Crear Enlace Bloqueado Ahora</span>
+                    </a>
+                    <button onclick="openAuthModal('register')" class="px-6 py-3.5 rounded-2xl text-sm font-bold bg-white/10 hover:bg-white/15 text-white border border-white/15 transition flex items-center gap-2">
+                        <i class="ph-duotone ph-coins text-emerald-400 text-base"></i>
+                        <span>Unirse como Creador (Ganas 30%)</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ticker -->
+            <div class="mt-10 border-y border-white/5 bg-[#040706]/80 py-4 overflow-hidden">
+                <p class="text-center text-xs text-gray-400 mb-3">
+                    Usado por creadores para crecer en <span class="text-[#87C76D] font-bold">más de 25 redes sociales</span> y monetizar cada clic
+                </p>
+                <div class="animate-ticker gap-4 px-4">
+                    <div class="flex items-center gap-3">
+                        <span class="px-4 py-2 rounded-xl bl-glass-soft flex items-center gap-2 text-xs font-semibold"><i class="ph-fill ph-youtube-logo text-red-500 text-lg"></i> YouTube</span>
+                        <span class="px-4 py-2 rounded-xl bl-glass-soft flex items-center gap-2 text-xs font-semibold"><i class="ph-fill ph-tiktok-logo text-pink-400 text-lg"></i> TikTok</span>
+                        <span class="px-4 py-2 rounded-xl bl-glass-soft flex items-center gap-2 text-xs font-semibold"><i class="ph-fill ph-discord-logo text-indigo-400 text-lg"></i> Discord</span>
+                        <span class="px-4 py-2 rounded-xl bl-glass-soft flex items-center gap-2 text-xs font-semibold"><i class="ph-fill ph-instagram-logo text-rose-500 text-lg"></i> Instagram</span>
+                        <span class="px-4 py-2 rounded-xl bl-glass-soft flex items-center gap-2 text-xs font-semibold"><i class="ph-fill ph-telegram-logo text-sky-400 text-lg"></i> Telegram</span>
+                        <span class="px-4 py-2 rounded-xl bl-glass-soft flex items-center gap-2 text-xs font-semibold"><i class="ph-fill ph-spotify-logo text-green-500 text-lg"></i> Spotify</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- INTERACTIVE LINK & SNIPPET BUILDER (#boostylink_details) -->
+        <!-- ===================================================== -->
+        <section id="boostylink_details" class="py-6 px-4 max-w-7xl mx-auto">
+            <div class="bl-glass rounded-3xl p-4 sm:p-7 lg:p-8 shadow-2xl relative overflow-hidden">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+                    <div>
+                        <span class="text-xs font-mono uppercase tracking-wider text-[#87C76D]">Generador Interactivo RayteBoost</span>
+                        <h2 class="text-xl sm:text-2xl font-extrabold text-white mt-0.5">Crea tu Enlace Bloqueado con Foto, Acciones y Publicidad</h2>
+                    </div>
+
+                    <div class="inline-flex bg-[#060b09] p-1.5 rounded-2xl border border-white/10 self-start">
+                        <button type="button" id="tabBtnUrl" onclick="setContentType('url')" class="px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 bg-emerald-500 text-black transition">
+                            <i class="ph-bold ph-link"></i>
+                            <span>URL Destino</span>
+                        </button>
+                        <button type="button" id="tabBtnSnippet" onclick="setContentType('snippet')" class="px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 text-gray-300 hover:text-white transition">
+                            <i class="ph-bold ph-code"></i>
+                            <span>Snippet / Texto Secreto</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-6">
+                    <!-- LEFT COLUMN: CONFIGURATION FORM -->
+                    <div class="lg:col-span-7 space-y-5">
+                        <div class="bg-[#08100c] border border-white/10 rounded-2xl p-4 sm:p-5 space-y-4">
+                            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                                <span class="w-6 h-6 rounded-lg bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-xs font-mono">1</span>
+                                Foto de Portada, Título y Destino
+                            </h3>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1.5">Título atractivo de tu contenido *</label>
+                                <input type="text" id="builderTitle" oninput="updateLivePreview()" value="🔥 Pack Exclusivo + Script VIP Actualizado 2026" class="w-full px-4 py-3 rounded-xl bg-[#0d1813] border border-white/15 text-sm text-white focus:outline-none focus:border-[#87C76D]">
+                            </div>
+
+                            <div id="urlInputContainer">
+                                <label class="block text-xs font-semibold text-gray-300 mb-1.5">URL de Destino Final *</label>
+                                <input type="url" id="builderDestUrl" oninput="updateLivePreview()" value="https://www.mediafire.com/" class="w-full px-4 py-3 rounded-xl bg-[#0d1813] border border-white/15 text-sm text-white focus:outline-none focus:border-[#87C76D]">
+                            </div>
+
+                            <div id="snippetInputContainer" class="hidden">
+                                <label class="block text-xs font-semibold text-emerald-300 mb-1.5">Texto Secreto / Key a Desbloquear *</label>
+                                <textarea id="builderSnippetText" rows="3" oninput="updateLivePreview()" class="w-full p-3.5 rounded-xl bg-[#0d1813] border border-emerald-500/30 font-mono text-xs text-emerald-200 focus:outline-none">KEY-VIP-2026: RAYTE-9948-XPLZ</textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1.5">Subir Foto de Portada o elegir miniatura rápida</label>
+                                <div class="flex flex-wrap items-center gap-2.5">
+                                    <label class="cursor-pointer px-3.5 py-2.5 rounded-xl bg-white text-black font-bold text-xs flex items-center gap-2 hover:bg-gray-200 transition">
+                                        <i class="ph-bold ph-upload-simple text-sm"></i>
+                                        <span>Subir Foto</span>
+                                        <input type="file" id="coverFileInput" accept="image/*" class="hidden" onchange="handleCoverFileUpload(event)">
+                                    </label>
+                                    <input type="text" id="builderCoverUrl" oninput="updateLivePreview()" placeholder="O URL de imagen" class="flex-1 px-3.5 py-2.5 rounded-xl bg-[#0d1813] border border-white/15 text-xs text-white">
                                 </div>
                             </div>
                         </div>
-                    `;
-                } catch(err) {
-                    console.error("Error al decodificar locker:", err);
+
+                        <!-- Actions List -->
+                        <div class="bg-[#08100c] border border-white/10 rounded-2xl p-4 sm:p-5 space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-lg bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-xs font-mono">2</span>
+                                    Pasos Sociales Obligatorios
+                                </h3>
+                                <button type="button" onclick="openActionCatalogModal()" class="px-3.5 py-2 rounded-xl bl-btn-gradient text-xs flex items-center gap-1.5">
+                                    <i class="ph-bold ph-plus"></i> Añadir Acción
+                                </button>
+                            </div>
+                            <div id="builderActionsContainer" class="space-y-3"></div>
+                        </div>
+
+                        <!-- Final Random Sponsor Ad Step -->
+                        <div class="bg-gradient-to-r from-emerald-950/70 via-[#0b1913] to-amber-950/40 border border-emerald-500/40 rounded-2xl p-4 sm:p-5 space-y-3">
+                            <h4 class="text-sm font-extrabold text-white">Paso Final Monetizado: Publicidad Aleatoria (Smartlink Rotator)</h4>
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                Al terminar los pasos de redes, el visitante abrirá un <strong class="text-amber-300">anuncio patrocinado al azar</strong> por 8 segundos antes de revelar el enlace.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-white/10">
+                                <div>
+                                    <label class="block text-[11px] text-gray-400 mb-1">Texto del botón final:</label>
+                                    <input type="text" id="sponsorBtnTextInput" oninput="updateLivePreview()" value="🔥 Paso Final: Ver Anuncio Patrocinado (Al Azar)" class="w-full px-3 py-2 rounded-lg bg-black/50 border border-white/15 text-xs text-amber-200 font-semibold">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] text-gray-400 mb-1">Tiempo de validación:</label>
+                                    <select id="sponsorTimerSelect" onchange="updateLivePreview()" class="w-full px-3 py-2 rounded-lg bg-black/50 border border-white/15 text-xs text-white">
+                                        <option value="8" selected>8 segundos (Recomendado)</option>
+                                        <option value="12">12 segundos (Máximo CPM)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 pt-2">
+                            <button type="button" onclick="generateAndSaveLockerLink()" class="flex-1 py-4 px-6 rounded-2xl bl-btn-gradient text-sm font-extrabold flex items-center justify-center gap-2 shadow-xl">
+                                <i class="ph-bold ph-rocket-launch text-lg"></i>
+                                <span>Crear Enlace Bloqueado y Obtener Link</span>
+                            </button>
+                        </div>
+
+                        <div id="generatedLinkResultBox" class="hidden bg-emerald-950/60 border-2 border-[#87C76D] rounded-2xl p-4 sm:p-5 space-y-3">
+                            <span class="text-xs font-bold text-[#87C76D] flex items-center gap-1.5">
+                                <i class="ph-fill ph-check-circle text-base"></i> ¡Tu Enlace Monetizado está listo!
+                            </span>
+                            <div class="flex flex-col sm:flex-row gap-2">
+                                <input type="text" id="generatedShareUrlInput" readonly class="flex-1 px-3.5 py-2.5 rounded-xl bg-black/70 border border-emerald-500/40 font-mono text-xs text-emerald-200 select-all">
+                                <button type="button" onclick="copyGeneratedLink()" class="px-4 py-2.5 rounded-xl bg-[#87C76D] text-black font-bold text-xs flex items-center justify-center gap-1.5 shrink-0">
+                                    <i class="ph-bold ph-copy"></i> <span id="copyLinkBtnText">Copiar Enlace</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: LIVE MOBILE PREVIEW -->
+                    <div class="lg:col-span-5 flex flex-col items-center">
+                        <div class="w-full max-w-[370px] bg-[#050807] border-[6px] border-[#1b2b23] rounded-[38px] p-3.5 shadow-2xl relative">
+                            <div class="w-28 h-4 bg-[#14201a] rounded-full mx-auto mb-3"></div>
+                            <div class="bg-[#0c1511] border border-white/10 rounded-2xl overflow-hidden shadow-lg">
+                                <div class="relative h-36 w-full bg-gray-900 overflow-hidden">
+                                    <img id="previewCoverImg" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=700&q=80" alt="Cover" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 relative">
+                                    <h4 id="previewTitleText" class="text-base font-extrabold text-white leading-snug">🔥 Pack Exclusivo + Script VIP</h4>
+                                    <div id="previewActionsList" class="mt-3.5 space-y-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- CREATOR & ADMIN DASHBOARD                             -->
+        <!-- ===================================================== -->
+        <section id="dashboardSection" class="py-10 px-4 max-w-7xl mx-auto">
+            <div class="bl-glass rounded-3xl p-5 sm:p-8 border border-emerald-500/30">
+                <h2 class="text-2xl font-extrabold text-white mb-2">Panel de Control de Enlaces e Ingresos</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+                    <div class="bg-[#08110d] border border-white/10 rounded-2xl p-4">
+                        <span class="text-xs text-gray-400">Visitas Desbloqueadas</span>
+                        <div id="statTotalUnlocks" class="text-2xl font-extrabold text-white mt-2 font-mono">142</div>
+                    </div>
+                    <div class="bg-[#08110d] border border-white/10 rounded-2xl p-4">
+                        <span class="text-xs text-gray-400">Impresiones Adsterra (x8)</span>
+                        <div id="statTotalImpressions" class="text-2xl font-extrabold text-amber-300 mt-2 font-mono">1,136</div>
+                    </div>
+                    <div class="bg-emerald-950/40 border border-emerald-500/40 rounded-2xl p-4">
+                        <span class="text-xs text-emerald-300 font-semibold">Pago a Creador (30%)</span>
+                        <div id="statCreator30Share" class="text-2xl font-extrabold text-[#87C76D] mt-2 font-mono">$1.02 USD</div>
+                    </div>
+                    <div class="bg-amber-950/30 border border-amber-500/40 rounded-2xl p-4">
+                        <span class="text-xs text-amber-300 font-semibold">Tu Ganancia Admin (70%)</span>
+                        <div id="statAdmin70Share" class="text-2xl font-extrabold text-amber-300 mt-2 font-mono">$2.39 USD</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================================================== -->
+    <!-- VIEW 2: VISITOR LOCKER VIEW (CON TUS 8 ANUNCIOS ADSTERRA) -->
+    <!-- ===================================================== -->
+    <section id="visitorLockerView" class="hidden flex-1 py-4 px-3 sm:px-6 max-w-4xl mx-auto w-full">
+        <div class="mb-4 p-2.5 rounded-2xl bl-glass flex items-center justify-between gap-2 border border-emerald-500/30">
+            <span class="text-xs text-gray-300">Modo Visitante • Visualizando 8 espacios publicitarios de Adsterra</span>
+            <button onclick="switchMainView('home')" class="px-3 py-1.5 rounded-xl bg-white/10 text-xs font-bold text-white">Volver</button>
+        </div>
+
+        <!-- ===================================================== -->
+        <!-- AD SLOT #2: Banner 300x250 Adsterra                   -->
+        <!-- ===================================================== -->
+        <div class="ad-slot-container p-3 mb-4 max-w-[340px] sm:max-w-[468px]">
+            <span class="ad-badge">AD SLOT #2 (Banner 300x250)</span>
+            <div id="adsterra-slot-2" class="w-full flex justify-center py-2">
+                <script>
+                    atOptions = {
+                        'key' : '6bc19282343ee38fcad12851a25d8ee2',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://bauval.org/22/6bc19282343ee38fcad12851a25d8ee2"></script>
+            </div>
+        </div>
+
+        <!-- MAIN LOCKER CARD -->
+        <div class="max-w-md mx-auto bl-glass rounded-[28px] overflow-hidden shadow-2xl border border-emerald-500/30">
+            <div class="relative h-48 w-full bg-black overflow-hidden">
+                <img id="lockerCoverImg" src="" alt="Portada" class="w-full h-full object-cover">
+            </div>
+
+            <div class="p-5 -mt-6 relative">
+                <!-- ===================================================== -->
+                <!-- AD SLOT #3: Social Bar / Banner compacto              -->
+                <!-- ===================================================== -->
+                <div id="adsterra-slot-3" class="mb-3 p-2 rounded-xl bg-amber-500/10 border border-amber-400/30 text-center">
+                    <span class="text-[10px] text-amber-300 font-bold block mb-1">AD SLOT #3 (Social Bar Script)</span>
+                    <!-- Social Bar script inyectado automáticamente en footer -->
+                    <span class="text-xs text-white">Patrocinador Activo Verificado</span>
+                </div>
+
+                <h1 id="lockerTitleHeading" class="text-lg font-extrabold text-white leading-snug"></h1>
+                <div id="lockerSocialStepsContainer" class="mt-4 space-y-2.5"></div>
+
+                <!-- ===================================================== -->
+                <!-- AD SLOT #4: Banner 160x600 o 300x250                  -->
+                <!-- ===================================================== -->
+                <div class="ad-slot-container p-2.5 my-4">
+                    <span class="ad-badge">AD SLOT #4 (Banner 300x250)</span>
+                    <div id="adsterra-slot-4" class="w-full flex justify-center py-2">
+                        <script>
+                            atOptions = {
+                                'key' : '6bc19282343ee38fcad12851a25d8ee2',
+                                'format' : 'iframe',
+                                'height' : 250,
+                                'width' : 300,
+                                'params' : {}
+                            };
+                        </script>
+                        <script src="https://bauval.org/22/6bc19282343ee38fcad12851a25d8ee2"></script>
+                    </div>
+                </div>
+
+                <!-- MANDATORY FINAL RANDOM SPONSOR STEP (SMARTLINK) -->
+                <div class="pt-2 border-t border-white/10">
+                    <button type="button" id="finalSponsorActionBtn" onclick="startFinalRandomSponsorStep()" class="w-full p-3.5 rounded-2xl bg-gradient-to-r from-amber-500/25 via-emerald-500/20 to-amber-500/25 border-2 border-amber-400/70 text-left flex items-center justify-between gap-3 glow-sponsor">
+                        <div>
+                            <p id="finalSponsorBtnTitle" class="text-xs font-extrabold text-white">🔥 Paso Final: Ver Anuncio Patrocinado (Smartlink)</p>
+                            <p class="text-[11px] text-amber-200">Abre 1 oferta aleatoria por 8 segundos</p>
+                        </div>
+                        <span id="finalSponsorStatusBadge" class="px-2.5 py-1 rounded-lg bg-amber-400 text-black font-extrabold text-xs">Abrir</span>
+                    </button>
+                </div>
+
+                <!-- UNLOCK PROGRESS -->
+                <div class="mt-5 bg-[#070d0a] p-3.5 rounded-2xl border border-white/10">
+                    <div class="flex items-center justify-between text-xs mb-1.5">
+                        <span class="text-gray-400">Progreso</span>
+                        <strong id="lockerProgressText" class="text-[#87C76D] font-mono">0 / 3</strong>
+                    </div>
+                    <div class="w-full h-2.5 rounded-full bg-white/10 overflow-hidden">
+                        <div id="lockerProgressBar" class="w-0 h-full bl-btn-gradient rounded-full transition-all duration-500"></div>
+                    </div>
+                </div>
+
+                <button type="button" id="mainUnlockDestinationBtn" onclick="handleFinalUnlockClick()" disabled class="mt-4 w-full py-4 px-5 rounded-2xl bg-white/10 text-gray-400 font-extrabold text-sm flex items-center justify-center gap-2 cursor-not-allowed">
+                    <i class="ph-bold ph-lock-key text-lg"></i>
+                    <span id="mainUnlockBtnText">Completa los pasos para desbloquear</span>
+                </button>
+
+                <div id="unlockedSnippetBox" class="hidden mt-4 p-4 rounded-2xl bg-emerald-950/70 border-2 border-[#87C76D] space-y-2.5">
+                    <pre id="unlockedSnippetContent" class="p-3 rounded-xl bg-black/80 text-emerald-200 font-mono text-xs overflow-x-auto"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================================================== -->
+        <!-- AD SLOT #6: Banner 300x250                              -->
+        <!-- ===================================================== -->
+        <div class="ad-slot-container p-3 mt-5 max-w-md mx-auto">
+            <span class="ad-badge">AD SLOT #6 (Banner 300x250)</span>
+            <div id="adsterra-slot-6" class="w-full flex justify-center py-2">
+                <script>
+                    atOptions = {
+                        'key' : '6bc19282343ee38fcad12851a25d8ee2',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://bauval.org/22/6bc19282343ee38fcad12851a25d8ee2"></script>
+            </div>
+        </div>
+
+        <!-- ===================================================== -->
+        <!-- AD SLOT #7: NATIVE BANNER ADSTERRA                    -->
+        <!-- ===================================================== -->
+        <div class="max-w-md mx-auto mt-5 bl-glass rounded-2xl p-4 border border-white/10">
+            <div class="text-[10px] text-gray-400 uppercase font-mono mb-2">AD SLOT #7 (Native Banner Adsterra)</div>
+            <div id="adsterra-slot-7" class="w-full flex justify-center py-1">
+                <!-- Tu código real de Native Banner Adsterra -->
+                <script async="async" data-cfasync="false" src="https://bauval.org/21/c35c40279fdfbfd1d62a1c1f16afa8dd"></script>
+                <div id="container-c35c40279fdfbfd1d62a1c1f16afa8dd"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- MODAL 1: VERIFICACIÓN CON BANNER 300x250 (AD SLOT #5) -->
+    <!-- ===================================================== -->
+    <div id="stepVerificationModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="w-full max-w-md bl-glass rounded-3xl p-5 border border-emerald-500/40 text-center space-y-4 shadow-2xl">
+            <h3 id="verifyModalTitle" class="text-lg font-extrabold text-white">Comprobando acción...</h3>
+            <p class="text-xs text-gray-300">Se validará en <strong id="verifyCountdownNumber" class="text-[#87C76D] font-mono">8</strong> segundos.</p>
+            <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div id="verifyModalProgressBar" class="w-0 h-full bl-btn-gradient transition-all duration-300"></div>
+            </div>
+
+            <!-- AD SLOT #5: 300x250 MIENTRAS ESPERA -->
+            <div class="ad-slot-container p-2">
+                <span class="ad-badge">AD SLOT #5 (Banner 300x250)</span>
+                <div id="adsterra-slot-5" class="w-full flex justify-center">
+                    <script>
+                        atOptions = {
+                            'key' : '6bc19282343ee38fcad12851a25d8ee2',
+                            'format' : 'iframe',
+                            'height' : 250,
+                            'width' : 300,
+                            'params' : {}
+                        };
+                    </script>
+                    <script src="https://bauval.org/22/6bc19282343ee38fcad12851a25d8ee2"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales adicionales (Catálogo y Auth) -->
+    <div id="actionCatalogModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="w-full max-w-2xl bl-glass rounded-3xl p-5 border border-white/15 max-h-[85vh] flex flex-col">
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                <h3 class="text-lg font-extrabold text-white">Seleccionar Acción Social</h3>
+                <button onclick="closeActionCatalogModal()" class="p-2 text-white"><i class="ph-bold ph-x"></i></button>
+            </div>
+            <div id="catalogGridContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 overflow-y-auto py-4"></div>
+        </div>
+    </div>
+
+    <div id="authModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="w-full max-w-md bl-glass rounded-3xl p-6 border border-emerald-500/30 space-y-4">
+            <h3 id="authModalHeading" class="text-xl font-extrabold text-white">Crear Cuenta Gratis</h3>
+            <form onsubmit="handleAuthSubmit(event)" class="space-y-3">
+                <input type="text" id="authUsernameInput" placeholder="Nombre de Creador" class="w-full px-3.5 py-2.5 rounded-xl bg-[#0a1410] border border-white/15 text-sm text-white">
+                <input type="email" id="authEmailInput" required placeholder="correo@correo.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#0a1410] border border-white/15 text-sm text-white">
+                <input type="password" id="authPasswordInput" required placeholder="Contraseña" class="w-full px-3.5 py-2.5 rounded-xl bg-[#0a1410] border border-white/15 text-sm text-white">
+                <button type="submit" class="w-full py-3 rounded-xl bl-btn-gradient text-sm font-extrabold">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPT DE LÓGICA GENERAL -->
+    <script>
+        const ACTION_CATALOG = [
+            { id: 'yt_sub', group: 'YouTube', title: 'Suscribirse al canal de YouTube', placeholder: 'https://youtube.com/@TuCanal', color: '#ff1111', icon: 'ph-youtube-logo', timer: 8 },
+            { id: 'yt_like_comment', group: 'YouTube', title: 'Dar Like y Comentar en Video', placeholder: 'https://youtu.be/TuVideo', color: '#e60000', icon: 'ph-thumbs-up', timer: 9 },
+            { id: 'tt_follow', group: 'TikTok', title: 'Seguir cuenta en TikTok', placeholder: 'https://tiktok.com/@TuUsuario', color: '#ff0050', icon: 'ph-tiktok-logo', timer: 7 },
+            { id: 'ig_follow', group: 'Instagram', title: 'Seguir en Instagram', placeholder: 'https://instagram.com/TuUsuario', color: '#E1306C', icon: 'ph-instagram-logo', timer: 7 },
+            { id: 'dc_join', group: 'Discord', title: 'Unirse al Servidor de Discord', placeholder: 'https://discord.gg/TuInvitacion', color: '#5865F2', icon: 'ph-discord-logo', timer: 7 },
+            { id: 'custom_visit', group: 'Custom', title: 'Visitar Página Recomendada', placeholder: 'https://tu-web.com', color: '#25A68B', icon: 'ph-globe', timer: 8 }
+        ];
+
+        let directLinksPool = [
+            'https://abscloud.org/1/434aa61352cb6082241f643d3c33f872',
+            'https://bauval.org/22/6bc19282343ee38fcad12851a25d8ee2'
+        ];
+
+        let currentContentType = 'url';
+        let currentCoverDataUrl = 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=700&q=80';
+        let builderActions = [
+            { uid: 'act_1', ...ACTION_CATALOG[0], url: 'https://www.youtube.com/' },
+            { uid: 'act_2', ...ACTION_CATALOG[1], url: 'https://www.youtube.com/' }
+        ];
+
+        let activeLockerData = null;
+        let completedStepMap = {};
+        let finalSponsorCompleted = false;
+        let activeVerifyInterval = null;
+        let lastOpenedStepUrl = '';
+        let platformStats = { unlocks: 142, impressions: 1136, totalRevenueUSD: 3.41 };
+        let savedLinksList = [{
+            id: 'VIP2026',
+            title: '🔥 Pack Exclusivo + Script VIP Actualizado 2026',
+            type: 'url',
+            destUrl: 'https://www.mediafire.com/',
+            cover: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=700&q=80',
+            actions: [{ uid: 'a1', title: 'Suscribirse al canal de YouTube', icon: 'ph-youtube-logo', color: '#ff1111', url: 'https://www.youtube.com/', timer: 7 }],
+            unlocks: 142
+        }];
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderBuilderActions();
+            updateLivePreview();
+            renderCatalogModalItems();
+            renderDashboardStats();
+
+            const params = new URLSearchParams(window.location.search);
+            const lockParam = params.get('lock');
+            if (lockParam) {
+                try {
+                    const decodedJson = decodeURIComponent(escape(atob(lockParam)));
+                    loadVisitorLockerView(JSON.parse(decodedJson));
+                } catch (err) {
+                    loadVisitorLockerView(savedLinksList[0]);
                 }
             }
         });
 
-        // Detector de permanencia real anti-trampa (El usuario no puede hacer trampa regresando al instante)
-        let task1Completed = false;
-        function startAntiCheatTask(taskNum, targetUrl) {
-            let startTime = Date.now();
-            let win = window.open(targetUrl, '_blank');
-            
-            alert("⏰ ACCIÓN ANTI-TRAMPA ACTIVA:\n\nDebes permanecer al menos 6 segundos en la página de YouTube/Patrocinador. Si regresas de inmediato, el sistema no te dará el visto bueno.");
-            
-            let checkInterval = setInterval(() => {
-                // Verificamos si pasaron al menos 6 segundos y la ventana sigue abierta o el foco regresó con tiempo suficiente
-                let elapsed = (Date.now() - startTime) / 1000;
-                if (elapsed >= 6) {
-                    clearInterval(checkInterval);
-                    task1Completed = true;
-                    document.getElementById('btnTask1').innerText = "✓ ¡Completado!";
-                    document.getElementById('btnTask1').className = "btn btn-sm btn-success disabled";
-                    
-                    // Activar paso 2 (Smartlink Rotator Aleatorio)
-                    let btn2 = document.getElementById('btnTask2');
-                    btn2.disabled = false;
-                    btn2.className = "btn btn-sm btn-warning";
-                    alert("¡Acción 1 validada con éxito! Ahora haz clic en 'Ver Anuncio' para el paso final.");
+        function setContentType(type) {
+            currentContentType = type;
+            document.getElementById('tabBtnUrl').className = type === 'url' ? 'px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 bg-emerald-500 text-black transition' : 'px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 text-gray-300 transition';
+            document.getElementById('tabBtnSnippet').className = type === 'snippet' ? 'px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 bg-emerald-500 text-black transition' : 'px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 text-gray-300 transition';
+            document.getElementById('urlInputContainer').classList.toggle('hidden', type !== 'url');
+            document.getElementById('snippetInputContainer').classList.toggle('hidden', type !== 'snippet');
+        }
+
+        function handleCoverFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = e => {
+                currentCoverDataUrl = e.target.result;
+                document.getElementById('builderCoverUrl').value = '';
+                updateLivePreview();
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function renderBuilderActions() {
+            const container = document.getElementById('builderActionsContainer');
+            container.innerHTML = '';
+            builderActions.forEach((act, idx) => {
+                const row = document.createElement('div');
+                row.className = 'p-3.5 rounded-xl bg-[#0d1813] border border-white/10 space-y-2';
+                row.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <span class="px-2.5 py-1 rounded-lg text-xs font-bold text-white flex items-center gap-1.5" style="background:${act.color}">
+                            <i class="ph-fill ${act.icon}"></i> ${act.title}
+                        </span>
+                        <button type="button" onclick="removeBuilderAction('${act.uid}')" class="text-red-400 text-xs"><i class="ph-bold ph-trash"></i></button>
+                    </div>
+                    <input type="url" value="${act.url}" oninput="updateActionUrl('${act.uid}', this.value)" class="w-full px-3 py-2 rounded-lg bg-black/50 border border-white/10 text-xs text-white">
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        function updateActionUrl(uid, val) {
+            const item = builderActions.find(a => a.uid === uid);
+            if (item) item.url = val;
+        }
+
+        function removeBuilderAction(uid) {
+            if (builderActions.length <= 1) return alert('Mantén al menos 1 acción.');
+            builderActions = builderActions.filter(a => a.uid !== uid);
+            renderBuilderActions();
+            updateLivePreview();
+        }
+
+        function openActionCatalogModal() { document.getElementById('actionCatalogModal').classList.remove('hidden'); }
+        function closeActionCatalogModal() { document.getElementById('actionCatalogModal').classList.add('hidden'); }
+
+        function renderCatalogModalItems() {
+            const grid = document.getElementById('catalogGridContainer');
+            grid.innerHTML = '';
+            ACTION_CATALOG.forEach(item => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.onclick = () => {
+                    builderActions.push({ uid: 'act_' + Date.now(), ...item, url: 'https://www.youtube.com/' });
+                    renderBuilderActions();
+                    updateLivePreview();
+                    closeActionCatalogModal();
+                };
+                btn.className = 'p-3 rounded-2xl bg-[#0b1510] border border-white/10 text-left flex items-center justify-between';
+                btn.innerHTML = `<span class="text-xs font-bold text-white">${item.title}</span><i class="ph-bold ph-plus-circle text-emerald-400"></i>`;
+                grid.appendChild(btn);
+            });
+        }
+
+        function updateLivePreview() {
+            document.getElementById('previewTitleText').textContent = document.getElementById('builderTitle').value.trim() || 'Contenido';
+            document.getElementById('previewCoverImg').src = document.getElementById('builderCoverUrl').value.trim() || currentCoverDataUrl;
+        }
+
+        function buildCurrentLockerPayload() {
+            return {
+                id: 'LK' + Math.floor(1000 + Math.random() * 9000),
+                title: document.getElementById('builderTitle').value.trim() || 'Contenido Exclusivo',
+                type: currentContentType,
+                destUrl: document.getElementById('builderDestUrl').value.trim() || 'https://google.com',
+                snippetText: document.getElementById('builderSnippetText').value.trim() || 'KEY-2026',
+                cover: document.getElementById('builderCoverUrl').value.trim() || currentCoverDataUrl,
+                actions: JSON.parse(JSON.stringify(builderActions)),
+                sponsorTimer: parseInt(document.getElementById('sponsorTimerSelect').value, 10) || 8,
+                unlocks: 1
+            };
+        }
+
+        function generateAndSaveLockerLink() {
+            const payload = buildCurrentLockerPayload();
+            savedLinksList.unshift(payload);
+            renderDashboardStats();
+            const base64Str = btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
+            const shareUrl = `${window.location.origin}${window.location.pathname}?lock=${base64Str}`;
+            document.getElementById('generatedShareUrlInput').value = shareUrl;
+            document.getElementById('generatedLinkResultBox').classList.remove('hidden');
+        }
+
+        function copyGeneratedLink() {
+            const input = document.getElementById('generatedShareUrlInput');
+            input.select();
+            document.execCommand('copy');
+            document.getElementById('copyLinkBtnText').textContent = '¡Copiado!';
+        }
+
+        function testCurrentLockerVisitorView() { loadVisitorLockerView(buildCurrentLockerPayload()); }
+
+        function loadVisitorLockerView(lockerObj) {
+            activeLockerData = lockerObj;
+            completedStepMap = {};
+            finalSponsorCompleted = false;
+
+            document.getElementById('creatorPlatformView').classList.add('hidden');
+            document.getElementById('visitorLockerView').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            document.getElementById('lockerCoverImg').src = lockerObj.cover;
+            document.getElementById('lockerTitleHeading').textContent = lockerObj.title;
+            document.getElementById('unlockedSnippetBox').classList.add('hidden');
+
+            renderVisitorSocialSteps();
+            updateVisitorLockerProgress();
+            recordVisitorAdImpressions(8); // Cuenta las 8 impresiones al cargar la visita
+        }
+
+        function renderVisitorSocialSteps() {
+            const container = document.getElementById('lockerSocialStepsContainer');
+            container.innerHTML = '';
+            activeLockerData.actions.forEach((act, index) => {
+                const isDone = !!completedStepMap[act.uid];
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.onclick = () => startSocialStepVerification(act);
+                btn.className = isDone ? 'w-full p-3.5 rounded-2xl bg-emerald-950/60 border border-emerald-500/50 flex items-center justify-between text-xs font-bold text-white' : 'w-full p-3.5 rounded-2xl flex items-center justify-between text-xs font-bold text-white shadow-md';
+                if (!isDone) btn.style.backgroundColor = act.color || '#25A68B';
+                btn.innerHTML = `<span>${index + 1}. ${act.title}</span><span>${isDone ? 'Listo ✓' : 'Ir →'}</span>`;
+                container.appendChild(btn);
+            });
+        }
+
+        function startSocialStepVerification(actionObj) {
+            if (completedStepMap[actionObj.uid]) return;
+            lastOpenedStepUrl = actionObj.url || 'https://www.youtube.com/';
+            window.open(lastOpenedStepUrl, '_blank', 'noopener,noreferrer');
+            openVerificationModal(actionObj.title, actionObj.timer || 7, () => {
+                completedStepMap[actionObj.uid] = true;
+                renderVisitorSocialSteps();
+                updateVisitorLockerProgress();
+            });
+        }
+
+        function startFinalRandomSponsorStep() {
+            if (finalSponsorCompleted) return;
+            const randomUrl = directLinksPool[Math.floor(Math.random() * directLinksPool.length)];
+            lastOpenedStepUrl = randomUrl;
+            window.open(randomUrl, '_blank', 'noopener,noreferrer');
+
+            openVerificationModal('Anuncio Patrocinado Final', activeLockerData.sponsorTimer || 8, () => {
+                finalSponsorCompleted = true;
+                document.getElementById('finalSponsorStatusBadge').textContent = 'Verificado ✓';
+                document.getElementById('finalSponsorStatusBadge').className = 'px-2.5 py-1 rounded-lg bg-[#87C76D] text-black font-extrabold text-xs';
+                updateVisitorLockerProgress();
+            });
+        }
+
+        function openVerificationModal(title, seconds, cb) {
+            const modal = document.getElementById('stepVerificationModal');
+            document.getElementById('verifyModalTitle').textContent = title;
+            let remaining = seconds;
+            document.getElementById('verifyCountdownNumber').textContent = remaining;
+            document.getElementById('verifyModalProgressBar').style.width = '0%';
+            modal.classList.remove('hidden');
+
+            if (activeVerifyInterval) clearInterval(activeVerifyInterval);
+            activeVerifyInterval = setInterval(() => {
+                remaining--;
+                let pct = Math.round(((seconds - remaining) / seconds) * 100);
+                document.getElementById('verifyModalProgressBar').style.width = pct + '%';
+                document.getElementById('verifyCountdownNumber').textContent = Math.max(0, remaining);
+                if (remaining <= 0) {
+                    clearInterval(activeVerifyInterval);
+                    modal.classList.add('hidden');
+                    if (cb) cb();
                 }
             }, 1000);
         }
 
-        // Rotador de Anuncios Aleatorios (Smartlink Adsterra simulado que alterna temáticas)
-        function startSmartlinkRotator() {
-            const smartlinkPool = [
-                "https://www.highperformanceformat.com/smartlink-casino-offer",
-                "https://www.highperformanceformat.com/smartlink-cooking-deals",
-                "https://www.highperformanceformat.com/smartlink-utility-app",
-                "https://www.highperformanceformat.com/smartlink-gaming-store"
-            ];
-            let randomOffer = smartlinkPool[Math.floor(Math.random() * smartlinkPool.length)];
-            
-            window.open(randomOffer, '_blank');
-            
-            setTimeout(() => {
-                alert("¡Anuncio verificado correctamente!");
-                document.getElementById('btnTask2').innerText = "✓ ¡Anuncio Visto!";
-                document.getElementById('btnTask2').className = "btn btn-sm btn-success disabled";
-                document.getElementById('finalUnlockBox').style.display = 'block';
-            }, 5000);
+        function updateVisitorLockerProgress() {
+            const totalSocial = activeLockerData.actions.length;
+            const doneSocial = activeLockerData.actions.filter(a => completedStepMap[a.uid]).length;
+            const totalRequired = totalSocial + 1;
+            const totalDone = doneSocial + (finalSponsorCompleted ? 1 : 0);
+            const pct = Math.round((totalDone / totalRequired) * 100);
+
+            document.getElementById('lockerProgressText').textContent = `${totalDone} / ${totalRequired}`;
+            document.getElementById('lockerProgressBar').style.width = `${pct}%`;
+
+            const unlockBtn = document.getElementById('mainUnlockDestinationBtn');
+            if (totalDone >= totalRequired) {
+                unlockBtn.disabled = false;
+                unlockBtn.className = 'mt-4 w-full py-4 px-5 rounded-2xl bl-btn-gradient font-extrabold text-sm flex items-center justify-center gap-2 cursor-pointer shadow-xl animate-bounce text-black';
+                document.getElementById('mainUnlockBtnText').textContent = activeLockerData.type === 'snippet' ? '🔓 REVELAR CÓDIGO SECRETO' : '🔓 DESBLOQUEAR Y ABRIR ENLACE';
+            }
         }
+
+        function handleFinalUnlockClick() {
+            if (!activeLockerData) return;
+            platformStats.unlocks += 1;
+            renderDashboardStats();
+            if (activeLockerData.type === 'snippet') {
+                document.getElementById('unlockedSnippetContent').textContent = activeLockerData.snippetText;
+                document.getElementById('unlockedSnippetBox').classList.remove('hidden');
+            } else {
+                window.open(activeLockerData.destUrl, '_blank', 'noopener,noreferrer');
+            }
+        }
+
+        function recordVisitorAdImpressions(count) {
+            platformStats.impressions += count;
+            platformStats.totalRevenueUSD += (count * 0.003);
+            renderDashboardStats();
+        }
+
+        function renderDashboardStats() {
+            const creator30 = (platformStats.totalRevenueUSD * 0.30).toFixed(2);
+            const admin70 = (platformStats.totalRevenueUSD * 0.70).toFixed(2);
+            document.getElementById('statTotalUnlocks').textContent = platformStats.unlocks.toLocaleString();
+            document.getElementById('statTotalImpressions').textContent = platformStats.impressions.toLocaleString();
+            document.getElementById('statCreator30Share').textContent = `$${creator30} USD`;
+            document.getElementById('statAdmin70Share').textContent = `$${admin70} USD`;
+            const bal = document.getElementById('userBalanceDisplay');
+            if (bal) bal.textContent = `$${creator30} USD (30%)`;
+        }
+
+        function switchMainView(sec) {
+            document.getElementById('visitorLockerView').classList.add('hidden');
+            document.getElementById('creatorPlatformView').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openAuthModal(m) { document.getElementById('authModal').classList.remove('hidden'); }
+        function closeAuthModal() { document.getElementById('authModal').classList.add('hidden'); }
+        function handleAuthSubmit(e) {
+            e.preventDefault();
+            document.getElementById('loggedOutButtons').classList.add('hidden');
+            document.getElementById('loggedInProfile').classList.remove('hidden');
+            document.getElementById('loggedInProfile').classList.add('flex');
+            closeAuthModal();
+        }
+        function logoutUser() {
+            document.getElementById('loggedInProfile').classList.add('hidden');
+            document.getElementById('loggedOutButtons').classList.remove('hidden');
+        }
+        function openAdConfigModal() { alert('Tus Direct Links y códigos ya se encuentran configurados en el sistema.'); }
     </script>
+
+    <!-- ===================================================== -->
+    <!-- CÓDIGOS DE ADSTERRA GLOBALES (Social Bar + Popunder)   -->
+    <!-- ===================================================== -->
+
+    <!-- Social Bar Adsterra -->
+    <script data-cfasync="false" src="https://bauval.org/14/ff0ee28f361c2b7bbd1d7f84b3785610"></script>
+
+    <!-- Popunder Adsterra (Se activa en el primer clic del usuario) -->
+    <script data-cfasync="false" src="https://abscloud.org/1/434aa61352cb6082241f643d3c33f872"></script>
+
 </body>
 </html>
